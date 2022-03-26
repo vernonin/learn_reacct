@@ -81,3 +81,7 @@
   - this.props.history.goBack()
   - this.props.history.goForward()
   - this.props.history.go()
+
+## withRouter
+  - withRouter可以加工一般组件，让一般组件具有路由组件所持有的API
+  - withRouter的返回是一个新组件

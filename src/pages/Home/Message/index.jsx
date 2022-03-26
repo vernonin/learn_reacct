@@ -36,15 +36,15 @@ export default class Message extends Component {
     this.props.history.push(`/home/message/detail`, {id, title})
   }
 
-  back = () => {
-    this.props.history.goBack()
-  }
-  forward = () => {
-    this.props.history.goForward()
-  }
-  go = () => {
-    console.log('gooooo')
-  }
+  // back = () => {
+  //   this.props.history.goBack()
+  // }
+  // forward = () => {
+  //   this.props.history.goForward()
+  // }
+  // go = () => {
+  //   this.props.history.go(2)
+  // }
   render() {
     const {messageArr} = this.state
     return (
@@ -80,9 +80,9 @@ export default class Message extends Component {
         {/* state 参数无需声明接收，正常注册路由即可 */}
         <Route path="/home/message/detail" component={Detail}/>
 
-        <button onClick={this.back}>退回</button>
+        {/* <button onClick={this.back}>退回</button>
         <button onClick={this.forward}>前进</button>
-        <button onClick={this.go}>Go</button>
+        <button onClick={this.go}>Go</button> */}
       </div>
     )
   }

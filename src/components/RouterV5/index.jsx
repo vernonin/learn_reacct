@@ -4,15 +4,14 @@ import {NavLink, Route, Switch, Redirect} from 'react-router-dom'
 import Home from '../../pages/Home'
 import About from '../../pages/About'
 import Test from '../../pages/Test'
+import Header from '../Header'
 
 import './index.css'
 export default class RouterV5 extends Component {
   render() {
     return (
       <div className='container'>
-        <div>
-          <h2>React Router Demo</h2>
-        </div>
+        <Header/>
         <div className='main'>
           <div>
             {/* <div className='lefe-nav'>About</div>
