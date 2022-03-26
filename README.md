@@ -72,3 +72,12 @@
     * 路由连接（携带参数）：<Link to={{pathname: '/demo/test', state: {name: 'tom', age: 12}}}>详情</Link>
     * 注册路由（无需声明接收，正常注册即可）：<Route path="/demo/test" component={Test}/>
     * 接收参数：const {name, age} = rhis.props.location.state
+
+
+## 编程式路由导航
+  借助`this.props.history`对象上API对操作路由的跳转、前进、后退
+  - this.props.history.push()
+  - this.props.history.replace()
+  - this.props.history.goBack()
+  - this.props.history.goForward()
+  - this.props.history.go()
