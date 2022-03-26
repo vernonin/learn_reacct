@@ -1,0 +1,24 @@
+.container{
+  padding-left: 20px;
+  border: 1px solid red;
+}
+.main{
+  display: flex;
+}
+
+.lefe-nav{
+  display: block;
+  font-size: 32px;
+  font-weight: bolder;
+}
+.content{
+  margin-left: 20px;
+}
+/* NavLink 组件点谁，谁就有active属性 */
+.active{
+  color: red;
+}
+/* 如果不想用active 可用 activeClassName 替换掉 */
+.huanglin{
+  color: green;
+}
