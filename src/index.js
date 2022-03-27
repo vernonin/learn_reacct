@@ -4,7 +4,18 @@ import { BrowserRouter } from 'react-router-dom'
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import store from './redux/store'
 
+store.subscribe(() => {
+  ReactDOM.render(
+    <BrowserRouter>
+      <React.StrictMode>
+        <App />
+      </React.StrictMode>
+    </BrowserRouter>,
+    document.getElementById('root')
+  );
+})
 ReactDOM.render(
   <BrowserRouter>
     <React.StrictMode>
