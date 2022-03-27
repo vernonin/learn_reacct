@@ -1,6 +1,12 @@
 import React, { Component } from 'react'
 // 引入store，用于获取redux中保存的状态
 import store from '../redux/store'
+// 引入activeCreator，专门用于创建active对象
+import{
+	createIncrementAction,
+	createDecrementAction,
+	createIncrementAsyncAction
+} from '../redux/count_actice'
 
 export default class Count extends Component {
 
@@ -44,20 +50,21 @@ export default class Count extends Component {
 			const count = store.getState()
 			switch(type) {
 				case 'increment':
-					store.dispatch({type: 'increment', data: parseInt(value)})
+					store.dispatch(createIncrementAction(parseInt(value)))
 					break;
 				case 'decrement':
-					store.dispatch({type: 'decrement', data: parseInt(value)})
+					store.dispatch(createDecrementAction(parseInt(value)))
 					break;
 				case 'incrementIfOdd':
 					if(count % 2 !== 0) {
-						store.dispatch({type: 'increment', data: parseInt(value)})
+						store.dispatch(createIncrementAction(parseInt(value)))
 					}
 					break;
 				case 'incrementAsync':
-					setTimeout(() => {
-						store.dispatch({type: 'increment', data: parseInt(value)})
-					}, 500)
+					// setTimeout(() => {
+					// 	store.dispatch(createIncrementAsyncAction(parseInt(value), 500))
+					// }, 500)
+					store.dispatch(createIncrementAsyncAction(parseInt(value), 1000))
 					break;
 			}
 		}
